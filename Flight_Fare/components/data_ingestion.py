@@ -1,6 +1,6 @@
 from cmath import e
 from Flight_Fare.exception import flight_fare_exception
-import logging
+import Flight_Fare.logger import logging
 import sys , os
 from Flight_Fare.exception import flight_fare_exception
 from Flight_Fare.entity.artifact_entity import DataIngestionArtifact

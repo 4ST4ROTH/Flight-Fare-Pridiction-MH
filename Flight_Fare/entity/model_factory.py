@@ -11,6 +11,7 @@ from collections import namedtuple
 from typing import List
 from Flight_Fare.logger import logging
 from sklearn.metrics import r2_score,mean_squared_error
+
 GRID_SEARCH_KEY = 'grid_search'
 MODULE_KEY = 'module'
 CLASS_KEY = 'class'
@@ -119,7 +120,7 @@ def evaluate_regression_model(model_list: list, X_train:np.ndarray, y_train:np.n
             logging.info(f"No model found with higher accuracy than base accuracy")
         return metric_info_artifact
     except Exception as e:
-        raise HousingException(e, sys) from e
+        raise flight_fare_exception(e, sys) from e
 
 
 def get_sample_model_config_yaml_file(export_dir: str):
@@ -204,7 +205,7 @@ class ModelFactory:
             module = importlib.import_module(module_name)
             # get the class, will raise AttributeError if class cannot be found
             logging.info(f"Executing command: from {module} import {class_name}")
-            class_ref = getattr(module, class_name)
+            class_ref =  getattr(module,class_name)
             return class_ref
         except Exception as e:
             raise flight_fare_exception(e, sys) from e
@@ -248,7 +249,7 @@ class ModelFactory:
             
             return grid_searched_best_model
         except Exception as e:
-            raise HousingException(e, sys) from e
+            raise flight_fare_exception(e, sys) from e
 
     def get_initialized_model_list(self) -> List[InitializedModelDetail]:
         """

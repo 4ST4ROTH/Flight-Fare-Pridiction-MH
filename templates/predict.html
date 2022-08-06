@@ -13,109 +13,193 @@
 
 
         <form action="/predict" method="post">
-            <legend>Flights fare Prediction Form</legend>
+            <legend>Flights fare Prediction</legend>
             <div class="mb-3">
                 <label class="form-label">Airline</label>
-                <input class="form-control" type="text" name="Airline" placeholder="Enter Airline Of Your Choice"
-                    required />
+                <select class="form-control" name="Airline" placeholder="Enter Airline Of Your Choice"
+                    required >
+
+                    <option value="IndiGo">
+                        IndiGo
+                    </option>
+                    <option value="Air India">
+                        Air India
+                    </option>
+                    <option value="Jet Airways">
+                        Jet Airways
+                    </option>
+                    <option value="Jet Airways Business">
+                        Jet Airways Business
+                    </option>
+                    <option value="SpiceJet">
+                        SpiceJet
+                    </option>
+                    <option value="GoAir">
+                        GoAir
+                    </option>
+                    <option value="Vistara">
+                        Vistara
+                    </option>
+                    <option value="Vistara Premium economy">
+                        Vistara Premium economy
+                    </option>
+                    <option value="Air Asia">
+                        Air Asia
+                    </option>
+                    <option value="Trujet">
+                        Trujet
+                    </option>
+                    <option value="Multiple carriers">
+                        Multiple carriers
+                    </option>
+                    <option value="Multiple carriers Premium economy">
+                        Multiple carriers Premium economy
+                    </option>
+                </select>
+            </div>
 
             </div>
             <div class="mb-3">
                 <label class="form-label">Date_of_Journey</label>
-                <select class="form-control" type="text" name="Date of Journey" placeholder="Enter the date in (DD/MM/YYYY)"
-                    required>
+                <input class="form-control" type="text" name="Date_of_Journey" placeholder="Enter the date in (DD/MM/YYYY)"
+                    required />
 
             </div>
             <div class="mb-3">
                 <label class="form-label">Source</label>
-                <input class="form-control" type="text" name="Origin"
-                    placeholder="Enter a value of bmi" />
+                <select class="form-control"  name="Origin" placeholder="Enter the Origin Station" 
+                    required>
+
+                    <option value="Banglore">
+                        Banglore
+                    </option>
+                    <option value="Kolkata">
+                        Kolkata
+                    </option>
+                    <option value="Delhi">
+                        Delhi
+                    </option>
+                    <option value="Chennai">
+                        Chennai
+                    </option>
+                    <option value="Mumbai">
+                        Mumbai
+                    </option>
+                </select>
 
             </div>
             <div class="mb-3">
-                <label class="form-label">Children</label>
-                <input class="form-control" type="text" name="children" placeholder="How many children do you have ?"
-                    required />
+                <label class="form-label">Destination</label>
+                <select class="form-control" type="text" name="Destination" placeholder="Enter the destination Station"
+                    required >
+
+                    <option value="New Delhi">
+                        New Delhi
+                    </option>
+                    <option value="Banglore">
+                        Banglore
+                    </option>
+                    <option value="Cochin">
+                        Cochin
+                    </option>
+                    <option value="Kolkata">
+                        Kolkata
+                    </option>
+                    <option value="Delhi">
+                        Delhi
+                    </option>
+                    <option value="Hyderabad">
+                        Hyderabad
+                    </option>
+                </select>
 
             </div>
 
-          <!--  <div class="mb-3">
-                <label class="form-label">Total Bedrooms</label>
-                <input class="form-control" type="text" name="total_bedrooms"
-                    placeholder="Enter a value of total_bedrooms" required />
+            <div class="mb-3">
+                <label class="form-label">Total_Stops</label>
+                <input class="form-control" type="text" name="Total_Stops"
+                    placeholder="Enter total stops present in the routing" required />
             </div>
             <div class="mb-3">
-                <label class="form-label">Population</label>
-                <input class="form-control" type="text" name="population" placeholder="Enter a value of population"
+                <label class="form-label">Additional_Info</label>
+                <select class="form-control" type="text" name="Additional_Info" placeholder="Choose the correct Info"
+                    required >
+
+                    <option value="In-flight meal not included">
+                        In-flight meal not included
+                    </option>
+                    <option value="No check-in baggage included">
+                        No check-in baggage included
+                    </option>
+                    <option value="1 Short layover">
+                        1 Short layover
+                    </option>
+                    <option value="1 Long layover">
+                        1 Long layover
+                    </option>
+                    <option value="2 Long layover">
+                        2 Long layover
+                    </option>
+                    <option value="Change airports">
+                        Change airports
+                    </option>
+                    <option value="Business class">
+                        Business class
+                    </option>
+                    <option value="Red-eye flight">
+                        Red-eye flight
+                    </option>
+                    <option value="No info">
+                        No info
+                    </option>
+                </select>
+
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Duration</label>
+                <input class="form-control" type="text" name="Duration" placeholder="Enter total Duration (hh:mm)"
                     required />
             </div>
             <div class="mb-3">
-                <label class="form-label">sex</label>
-                <input class="form-control" type="text" name="sex" placeholder="Gender"
-                    required />
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Median Income</label>
-                <input class="form-control" type="text" name="median_income"
-                    placeholder="Enter a value of median_income" required />
+                <label class="form-label">Arrival_Time</label>
+                <input class="form-control" type="text" name="Arrival_Time"
+                    placeholder="Enter arrival time (hh:mm)" required />
             </div>-->
             <div class="mb-3">
-                <label class="form-label">Smoker</label>
-                <select class="form-control" name="smoker" placeholder="Are you smoker ?"
-                    required>
-
-                    <option value="yes">
-                        Yes
-                    </option>
-                    <option value="no">
-                        No
-                    </option>
-                </select>
+                <label class="form-label">Departure_Time</label>
+                <input class="form-control" name="Dep_Time" placeholder="Enter departure time (hh:mm)"
+                    required />
             </div>
 
             <div class="mb-3">
-                <label class="form-label">Region</label>
-                <select class="form-control" name="region" placeholder="Enter your region"
-                    required>
-                    
-                    <option value="southeast">
-                        Southeast
-                    </option>
-                    <option value="southwest">
-                        Southwest
-                    </option>
-                    <option value="northeast">
-                        Northeast
-                    </option>
-                    <option value="northwest">
-                        Northwest
-                    </option>
-                </select>
+                <label class="form-label">Route</label>
+                <input class="form-control" name="Route" placeholder="Enter the route course"
+                    required />
             </div>
 
-            <div class="mb-3">
+        <!--    <div class="mb-3">
 
                 <input class="btn btn-primary" type="submit" value="Predict Insurance Premium Value" required />
             </div>
 
         </form>
-    </div>
+    </div>-->
 
     <div class="col-md-6 col-sm-12 col-xs-6 col-lg-6">
         <div class="card">
             <div class="card-header">
-              Insurance Premium Price
+              price
             </div>
             <div class="card-body">
-        {% if context['premium_data'] is not none %}
+        {% if context['Flight_Fare_data'] is not none %}
         <table class="table table-striped">
-            <caption>Insurance Premium Prediction </caption>
+            <caption>Flight Fare Prediction </caption>
             <tr>
                 <th>Input Feature</th>
                 <th>Feature Value</th>
 
             </tr>
-            {% for column,value in context['premium_data'].items() %}
+            {% for column,value in context['Flight_Fare_data'].items() %}
 
 
 
@@ -137,7 +221,7 @@
         {% else %}
        
               <h5 class="card-title">Submit Form</h5>
-              <p class="card-text">Kindly provide necessary information to estimate insurance price</p>
+              <p class="card-text">Kindly provide necessary information to estimate  fare</p>
             
          
 
