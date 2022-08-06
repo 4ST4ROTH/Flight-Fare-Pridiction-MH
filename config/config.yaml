@@ -1,0 +1,41 @@
+training_pipeline_config:
+   pipeline_name: flight_fare
+   artifact_dir: artifact
+
+data_ingestion_config:
+   download_url: https://www.kaggle.com/datasets/nikhilmittal/flight-fare-prediction-mh/download?datasetVersionNumber=1
+   dataset_dir: dataset
+   ingested_dir: ingested_data
+   ingested_train_dir: train_data
+   ingested_test_dir: test_data
+
+data_validation_config:
+   scheme_dir: config
+   schema_file_name: schema.yaml
+   report_file_name: report.json
+   report_page_file_name: report.html
+   report_dir: report
+
+data_transformation_config:
+   transformed_dir: transformed_data
+   transformed_train_dir: train_data
+   transformed_test_dir: test_data
+   preprocessing_dir: preprocessed
+   preprocessed_object_file_name: preprocessed.pkl
+
+model_trainer_config:
+   trained_model_dir: trained_model
+   trained_model_file_name: model.pkl
+   base_accuracy: 0.6
+   trained_model_config_dir: config
+   trained_model_config_file_name: model.yaml
+
+model_evaluation_config:
+   model_evaluation_dir: config
+   model_evaluation_file_name: model_evaluation.yaml
+
+model_pusher_config:
+   model_export_dir: saved models
+
+
+
